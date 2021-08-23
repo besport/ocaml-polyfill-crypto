@@ -44,9 +44,9 @@ jobs:
         with:
           ocaml-version: ${{ matrix.ocaml-version }}
 
-      - run: opam pin add crypto.dev . --no-action
+      - run: opam pin add polyfill-crypto.dev . --no-action
 
-      - run: opam depext crypto --yes --with-doc --with-test
+      - run: opam depext polyfill-crypto --yes --with-doc --with-test
 
       - run: opam install . --deps-only --with-doc --with-test
 
